@@ -1,0 +1,54 @@
+<mvc:View controllerName="seidorzfiori_curso.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m">
+	<App>
+	<pages>	
+			<Page title="Workshop de fiori 2a Parte">
+				<content>
+				<Table
+                    headerText="Tabla de Pedidos de venta"
+                    items="{/salesOrder}"
+                  
+                    mode="SingleSelectMaster"
+                    >
+                    <columns>
+                        <Column>
+                            <header>
+                                <Label text="Cliente" />
+                            </header>
+                        </Column>
+                        <Column>
+                            <header>
+                                <Label text="Importe Total" />
+                            </header>
+                        </Column>
+                        <Column>
+                            <header>
+                                <Label text="Importe Neto" />
+                            </header>
+                        </Column>
+                        <Column>
+                            <header>
+                                <Label text="Impuestos" />
+                            </header>
+                        </Column>
+                         <Column>
+                            <header>
+                                <Label text="Moneda" />
+                            </header>
+                        </Column>
+                    </columns>
+                    <ColumnListItem type="Inactive">
+                        <cells>
+                            <Text text="{BuyerName}" />
+                        	<Text text="{GrossAmount}" />
+                        	<Text text="{NetAmount}" />
+                        	<Text text="{TaxAmount}" />
+                        	<Text text="{CurrencyCode}" />
+                        </cells>
+                    </ColumnListItem>
+                </Table>
+				</content>
+			</Page>
+			</pages>
+</App>
+</mvc:View>

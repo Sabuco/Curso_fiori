@@ -1,0 +1,51 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="seidorzfiori_curso.controller.View2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Workshop de fiori 2a Parte" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<Table headerText="Posiciones" items="{/salesOrderItem}">
+				<columns>
+					<Column>
+						<header>
+							<Label text="Posición"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="Producto"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="Cantidad"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="Unidad Medida"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="Importe"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="Moneda"/>
+						</header>
+					</Column>
+				</columns>
+				<ColumnListItem type="Inactive">
+					<cells>
+						<Text text="{SoItemPos}"/>
+						<Text text="{ProductId}"/>
+						<Text text="{Quantity}"/>
+						<Text text="{QuantityUnit}"/>
+						<Text text="{GrossAmount}"/>
+						<Text text="{CurrencyCode}"/>
+					</cells>
+				</ColumnListItem>
+			</Table>
+		</content>
+	</Page>
+</mvc:View>
